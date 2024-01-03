@@ -1,0 +1,10 @@
+const action_name = "action_hello_world";
+const rasa_server_url = "/action_info/";
+// const rasa_server_url = "http://localhost:5005/webhooks/rest/webhook";
+const sender_id = uuidv4();
+var INDEX = 0;
+var message_response = ""
+var free_times = {};
+var product_state = false;
+var product = []
+var counter = 0

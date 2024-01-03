@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Title  -->
+    <title>Chatbot</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/img/fav.png" title="Favicon" sizes="16x16" />
+    <link rel="stylesheet" href="https://pbutcher.uk/flipdown/css/flipdown/flipdown.css">
+
+    <!-- ====== bootstrap icons cdn ====== -->
+    <link rel="stylesheet" href="./assets/fonts/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" />
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="./assets/css/lib/bootstrap.min.css">
+    <!-- ====== font family ====== -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/lib/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/lib/animate.css" />
+    <link rel="stylesheet" href="./assets/css/lib/jquery.fancybox.css" />
+    <link rel="stylesheet" href="./assets/css/lib/lity.css" />
+    <link rel="stylesheet" href="./assets/css/lib/swiper.min.css" />
+    <!-- ====== global style ====== -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Chat Screen Static files -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="./assets/css/chat.css" type="text/css">
+    <link rel="stylesheet" href="./assets/scss/base.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .dropdown-content {
+            border-radius: 8px;
+            height: unset !important;
+            background-color: #fff;
+            margin: 0;
+            display: none;
+            min-width: 100px;
+            overflow-y: auto;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+
+        .dropdown-content.active {
+            display: block;
+            width: 100px;
+            left: 310px;
+            top: 21.3906px;
+            height: 77px;
+            transform-origin: 100% 0px;
+            opacity: 1;
+            transform: scaleX(1) scaleY(1);
+        }
+
+        .dropdown-content li {
+            clear: both;
+            color: rgba(0, 0, 0, 0.87);
+            cursor: pointer;
+            min-height: 50px;
+            line-height: 1.5rem;
+            width: 100%;
+            text-align: left;
+        }
+
+        .choose-us.style-1 .info .btn {
+            margin-top: 20px !important;
+        }
+
+        .features.style-4 {
+            background: #fff;
+        }
+
+        .btn,
+        .btn-large,
+        .btn-small,
+        .btn-flat {
+            display: inline-block;
+            height: 36px;
+            line-height: 1 !important;
+            padding: 0 16px;
+            text-transform: uppercase;
+            vertical-align: middle;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-model1 {
+            padding: 12px 37px !important;
+        }
+
+        .modal {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--===start-snacker-bar====-->
+    <div class="snaker-main-container">
+        <div class="inner-wrapper">
+            <div id="flipdown" class="flipdown"></div>
+            <div class="heading-text">
+                <h1>
+                    Our special price ends on ,
+                    <span>14th January 2024</span>
+                </h1>
+            </div>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+    </div>
+    <!--===end-snacker-bar====-->
+    <!-- ====== start header ====== -->
+    <header class="style-4">
+        <div class="content">
+            <div class="container">
+                <div class="row gx-0">
+                    <div class="col-lg-6">
+                        <div class="info">
+                            <!-- <small class="mb-50 title_small">Heena-Chatbot AI</small> -->
+                            <h1 class="mb-30">Transform Your Business with Our <span> Smart AI Chatbots! </span> </h1>
+                            <p class="text mb-30">Boost Efficiency, Engage Customers, and Scale Your Business Seamlessly
+                            </p>
+                            <p class="text">With
+                                HeenaGPT and HeenaRAG, you can instantly and automatically handle customer queries,
+                                generate and qualify leads, schedule meetings, record complaints and feedback, answer
+                                general queries and much more!</p>
+                            <div class="d-flex align-items-center mt-50">
+                                <a href="javascript:void(0)" class="btn rounded-pill bg-blue4 fw-bold text-white me-4"
+                                    data-bs-toggle="modal" data-bs-target="#booknowmodal">
+                                    <small> Book Now</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="img">
+                            <img src="./assets/img/header/header_4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/img/header/header_4_bubble.png" alt="" class="bubble">
+        </div>
+        <img src="./assets/img/header/header_4_wave.png" alt="" class="wave">
+    </header>
+    <!-- ====== end header ====== -->
+    <!--Contents-->
+    <main>
+        <!-- ====== start testimonials ====== -->
+        <section class="testimonials style-7 section-padding">
+            <div class="container">
+                <div class="section-head text-center style-4 mb-80">
+                    <div class="top-title mb-10">
+                        <img src="./assets/img/line_l.png" alt="">
+                        <h5> Feedbacks </h5>
+                        <img src="./assets/img/line_r.png" alt="">
+                    </div>
+                    <h2 class="">
+                        Happy <span> Users Around </span> <br> From Worlds
+                    </h2>
+                </div>
+                <div class="testimonials-slider7 position-relative overflow-hidden">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    " Integrating Infinevo Tech's AI Chatbots transformed our customer
+                                                    interactions. We saved over 15 hours weekly by automating responses.
+                                                    Our customers now receive instant replies, and our sales leads
+                                                    increased by 30% in the first month. Outstanding service! "
+                                                </div>
+                                                <div class="author">
+                                                    <div class="inf">
+                                                        <p> APML </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    " Infinevo's AI chatbots are a game-changer. Our team saved around
+                                                    10 hours a week on meeting scheduling alone. Lead generation
+                                                    efficiency increased by 45% within just a few weeks. It's simplified
+                                                    our processes and enhanced our customer service beyond our
+                                                    expectations! "
+                                                </div>
+                                                <div class="author">
+                                                    <div class="inf">
+                                                        <h6> Goldstar </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    " Infinevo's AI Chatbot has been an incredible asset for our
+                                                    business. It handles all client queries and manages new lead
+                                                    registrations flawlessly. This has freed up our team, letting us
+                                                    concentrate on our core operations, subsequently elevating both our
+                                                    revenues and productivity. A great addition! "
+                                                </div>
+                                                <div class="author">
+                                                    <div class="inf">
+                                                        <h6> KV Infratech </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    " The Chatbot from Infinevo has been a godsend for us. Now, off-hour
+                                                    leads aren't lost in the shuffle; the bot expertly manages these
+                                                    interactions. Furthermore, our routine queries are mostly resolved
+                                                    by the bot, affording us the opportunity to dedicate more time to
+                                                    our specialized service areas. --- Legal Company "
+                                                </div>
+                                                <div class="author">
+                                                    <div class="inf">
+                                                        <h6> Pabay </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    " This Chatbot saves us a lot of time. It efficiently showcases our
+                                                    products and assists with pricing, business information, and FAQs,
+                                                    involving us only when the lead is qualified. This has led to 18%
+                                                    higher conversions within the first two months. "
+                                                </div>
+                                                <div class="author">
+                                                    <div class="inf">
+                                                        <h6> Stag Infosolutions </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    " Our response time to queries dropped by an incredible 70% with
+                                                    chatbots. The real-time notification feature has been pivotal. The
+                                                    bots handle queries faster than ever, ensuring that our customers
+                                                    are more satisfied with our services. Even sales have increased by
+                                                    22%. Shubham and his team know what they are doing! "
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    " Our experience with Shubham's team has been exceptional. Their
+                                                    flexibility and business acumen are commendable. Our customized AI
+                                                    Chatbot has significantly improved our lead generation, boosting our
+                                                    appointments by 36%. Troubleshooting and query handling have seen a
+                                                    remarkable 65% reduction in customer inquiries. "
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <img src="./assets/img/testimonials/testi7_back.png" alt="" class="img_back slide_up_down">
+            <img src="./assets/img/testimonials/testi7_qout.png" alt="" class="testi_qout">
+        </section>
+        <div class="modal fade contact style-6" id="booknowmodal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <form action="{% url 'book_now_mail" class="form" method="post">
+                    <p class="text-center text-danger fs-12px mb-30">The field is required mark as *</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="email" class="form-control" placeholder="Email Address *" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="phone" class="form-control" placeholder="Phone Number" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="company" class="form-control" placeholder="Company Name" >
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                                <div class="form-group mb-20">
+                                    <select name="interest" class="form-select" required>
+                                        <option value="how can we help" selected="">Product Of Interest</option>
+                                        <option value="Heena GPT">Heena GPT</option>
+                                        <option value="Heena RAG">Heena RAG</option>
+                                    </select>
+                                </div>
+                            </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <textarea rows="10" name="message" class="form-control" placeholder="How can we help you?"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 text-center mt-3">
+                            {% csrf_token %}
+                            <input type=" submit" value="Send Your Request"
+                                class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold text-light">
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <div class="modal fade contact style-6" id="askmoremodal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content content">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <form action="{% url 'ask_more_mail" class="form" method="post">
+                    <p class="text-center text-danger fs-12px mb-30">The field is required mark as *</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="email" class="form-control" placeholder="Email Address *" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="phone" class="form-control" placeholder="Phone Number" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group mb-20">
+                                <input type="text" name="company" class="form-control" placeholder="Company Name" >
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <textarea rows="10" name="message" class="form-control" placeholder="Ask your Questions"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 text-center mt-3">
+                            {% csrf_token %}
+                            <input type=" submit" value="Send Your Request"
+                                class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold text-light">
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- ====== end testimonials ====== -->
+        <!-- ====== start services ====== -->
+        <section class="services section-padding style-1">
+            <div class="container">
+                <div class="row">
+                    <!-- offset-lg-1 -->
+                    <div class="col">
+                        <div class="section-head mb-60">
+                            <h6 class="color-main text-uppercase wow fadeInUp">our chatbot</h6>
+                            <div class="section-head style-5">
+                                <h2 class="style-5"> Powering Your <span> Business </span> </h2>
+                            </div>
+                            <!-- <h2 class="wow fadeInUp">
+                                Business
+                            </h2> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0">
+                                <h5>
+                                    <a href="#"> Lead Generation & Qualification </a>
+                                    <span class="num">01</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/1.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Automatically generates, probes, and qualifies leads, instantly forwarding
+                                        details to the relevant person or team in real-time.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                                <h5>
+                                    <a href="#">Appointment Booking in Real Time</a>
+                                    <span class="num">02</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/2.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Effortlessly schedules meetings by asking and verifying details, providing open
+                                        calendar slots, and booking appointments on the fly.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> Custom Query Management </a>
+                                    <span class="num">03</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/3.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Facilitates user-generated custom or sales queries, capturing contact details
+                                        and instantly forwarding them to the respective teams via email.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0">
+                                <h5>
+                                    <a href="#"> AI-Powered Smart Responses </a>
+                                    <span class="num">04</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/4.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Delivers accurate answers using Pre-Trained Data, RAG Pattern AI and ChatGPT for
+                                        FAQs and personalized responses.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                                <h5>
+                                    <a href="#">Product Display and Other Business Information</a>
+                                    <span class="num">05</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/5.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Loaded functionalities for Product Displays, Business Information, Payment
+                                        Terms, and FAQs provide immediate assistance.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> Extensive Analytics & Dashboard </a>
+                                    <span class="num">06</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Captures all chat sessions with comprehensive details exportable to Excel,
+                                        including session specifics, user behavior, message frequency, confidence level,
+                                        response time, and more.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> User Customization Capabilities </a>
+                                    <span class="num">07</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Empowers users to customize intents, responses, configurations directly from the
+                                        dashboard, ensuring flexibility and adaptation to evolving needs.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> Intelligent User Interaction </a>
+                                    <span class="num">08</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Incorporates smart looping sensors, UI elements, rich text formatting, and
+                                        multimedia responses for seamless experience.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> Feedback & Complaint Management </a>
+                                    <span class="num">09</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Allows users to offer feedback or ratings and register complaints in real-time
+                                        by opening tickets, ensuring their opinions are heard and addressed promptly.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> Simple CRM Functionality </a>
+                                    <span class="num">10</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        The dashboard works as an uncomplicated CRM, making organization and management
+                                        of customer interactions hassle-free.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> Customization and Integration </a>
+                                    <span class="num">11</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Capable of easy customization and integration with any CRM, ERP, or third-party
+                                        applications.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="service-box wow fadeInUp" data-wow-delay="0.4s">
+                                <h5>
+                                    <a href="#"> Done-For-You Chatbot Development </a>
+                                    <span class="num">12</span>
+                                </h5>
+                                <div class="icon">
+                                    <img src="./assets/img/icons/serv_icons/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <div class="text">
+                                        Our team manages the chatbot development and deployment, ensuring you don't
+                                        require any technical knowledge or additional hires for this service.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/img/services/ser_shap_l.png" alt="" class="ser_shap_l">
+            <img src="./assets/img/services/ser_shap_r.png" alt="" class="ser_shap_r">
+        </section>
+        <!-- ====== end services ====== -->
+
+
+        <!-- ====== start choose-us====== -->
+        <section class="choose-us section-padding pt-5 bg-gray style-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="info">
+                            <div class="section-head style-5 mb-60">
+                                <h2 class="style-5"> <span> Benefits </span> </h2>
+                            </div>
+                            <!-- <div class="section-head mb-50">
+                                <h2 class="wow fadeInUp">
+
+                                </h2>
+                            </div> -->
+                            <ul>
+                                <li class="wow fadeInUp">
+                                    <span class="icon">
+                                        <i class="bi bi-check2"></i>
+                                    </span>
+                                    <h6>
+                                        24x7, Instant and Automatic response to your website visitors
+                                    </h6>
+                                </li>
+                                <li class="wow fadeInUp">
+                                    <span class="icon">
+                                        <i class="bi bi-check2"></i>
+                                    </span>
+                                    <h6>
+                                        Effortless Management: Leads, Appointments, Custom Queries, Complaints, Feedback
+                                    </h6>
+                                </li>
+                                <li class="wow fadeInUp">
+                                    <span class="icon">
+                                        <i class="bi bi-check2"></i>
+                                    </span>
+                                    <h6>
+                                        Powerful Analytics to enable Data-driven Decision-making: Refining Processes,
+                                        Marketing Campaigns or Scaling Business
+                                    </h6>
+                                </li>
+                                <li class="wow fadeInUp">
+                                    <span class="icon">
+                                        <i class="bi bi-check2"></i>
+                                    </span>
+                                    <h6>
+                                        Higher Customer Engagement and Satisfaction
+                                    </h6>
+                                </li>
+                                <li class="wow fadeInUp">
+                                    <span class="icon">
+                                        <i class="bi bi-check2"></i>
+                                    </span>
+                                    <h6>
+                                        Custom-crafted Chatbot for “Your” business in a Done-For-You Model
+                                    </h6>
+                                </li>
+                                <li class="wow fadeInUp">
+                                    <span class="icon">
+                                        <i class="bi bi-check2"></i>
+                                    </span>
+                                    <h6>
+                                        Save Time, Cost and Efforts while improving Business Efficiency
+                                    </h6>
+                                </li>
+                            </ul>
+                            <!-- <p class="mb-10 wow fadeInUp">
+                                Make the Smart Choice – Elevate Your Business with Exclusive Advantages from Our AI
+                                Chatbot Solutions!
+                            </p>
+                            <a href="#" class="btn butn-gard border-0 text-white wow fadeInUp">
+                                <span>Click Here</span>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== start   CASE STUDIES ====== -->
+        <section class="case-studies testimonials style-7 section-padding">
+            <div class="container">
+                <div class="section-head text-center style-5">
+                    <h2> CASE <span> STUDIES </span> </h2>
+                </div>
+                <!-- <div class="section-head text-center style-4">
+
+                    <h2 class="">
+                        CASE <span> STUDIES </span>
+
+                    </h2>
+                </div> -->
+                <div class="testimonials-slider7 position-relative overflow-hidden">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper section-padding">
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                                                    dolore ex quas porro officia, accusantium aliquid quo error modi
+                                                    neque, alias est quam deserunt perferendis ab dolor numquam officiis
+                                                    qui magni ut voluptatum voluptas non! Consequatur est eligendi
+                                                    distinctio sint eum et laboriosam fugit? Ut accusamus alias nemo.
+                                                    Sit, neque.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                                                    dolore ex quas porro officia, accusantium aliquid quo error modi
+                                                    neque, alias est quam deserunt perferendis ab dolor numquam officiis
+                                                    qui magni ut voluptatum voluptas non! Consequatur est eligendi
+                                                    distinctio sint eum et laboriosam fugit? Ut accusamus alias nemo.
+                                                    Sit, neque.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                                                    dolore ex quas porro officia, accusantium aliquid quo error modi
+                                                    neque, alias est quam deserunt perferendis ab dolor numquam officiis
+                                                    qui magni ut voluptatum voluptas non! Consequatur est eligendi
+                                                    distinctio sint eum et laboriosam fugit? Ut accusamus alias nemo.
+                                                    Sit, neque.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                                                    dolore ex quas porro officia, accusantium aliquid quo error modi
+                                                    neque, alias est quam deserunt perferendis ab dolor numquam officiis
+                                                    qui magni ut voluptatum voluptas non! Consequatur est eligendi
+                                                    distinctio sint eum et laboriosam fugit? Ut accusamus alias nemo.
+                                                    Sit, neque.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                                                    dolore ex quas porro officia, accusantium aliquid quo error modi
+                                                    neque, alias est quam deserunt perferendis ab dolor numquam officiis
+                                                    qui magni ut voluptatum voluptas non! Consequatur est eligendi
+                                                    distinctio sint eum et laboriosam fugit? Ut accusamus alias nemo.
+                                                    Sit, neque.
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                                                    dolore ex quas porro officia, accusantium aliquid quo error modi
+                                                    neque, alias est quam deserunt perferendis ab dolor numquam officiis
+                                                    qui magni ut voluptatum voluptas non! Consequatur est eligendi
+                                                    distinctio sint eum et laboriosam fugit? Ut accusamus alias nemo.
+                                                    Sit, neque.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-10">
+                                            <div class="testi-card">
+                                                <div class="text">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                                                    dolore ex quas porro officia, accusantium aliquid quo error modi
+                                                    neque, alias est quam deserunt perferendis ab dolor numquam officiis
+                                                    qui magni ut voluptatum voluptas non! Consequatur est eligendi
+                                                    distinctio sint eum et laboriosam fugit? Ut accusamus alias nemo.
+                                                    Sit, neque.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-50 ">
+                            <div class="section-head text-center style-4">
+
+                                <h2 class="mb-30 wow fadeInUp">
+                                    Make the Smart Choice – Elevate Your Business with Exclusive Advantages from <span>
+                                        Our AI
+                                        Chatbot Solutions! </span>
+
+                                </h2>
+                            </div>
+                            <!-- <h2 class="mb-10 wow fadeInUp mb-30 text-center fw-bold">
+
+                            </h2> -->
+                            <a href="#" class="btn butn-gard border-0 text-white wow fadeInUp">
+                                <span>Click Here</span>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- <img src="./assets/img/testimonials/testi7_back.png" alt="" class="img_back slide_up_down">
+            <img src="./assets/img/testimonials/testi7_qout.png" alt="" class="testi_qout"> -->
+        </section>
+        <!-- ====== end choose-us====== -->
+        <!-- ====== start screenshots  ====== -->
+        <div class="screenshots style-4">
+            <div class="screenshots-slider style-4">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./assets/img/screenshots/1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./assets/img/screenshots/2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./assets/img/screenshots/3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./assets/img/screenshots/4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img">
+                                <img src="./assets/img/screenshots/5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/img/screenshots/hand.png" alt="" class="mob-hand">
+        </div>
+        <!-- ====== end screenshots  ====== -->
+        <!-- ====== start pricing ====== -->
+        <section class="pricing section-padding style-5">
+            <div class="container">
+                <div class="section-head text-center mb-60 style-5">
+                    <h2 class="mb-20"> Choose Plan and <span> Kick-start </span> </h2>
+                    <p>
+                        Whether you're just getting started with rapid testing or scaling across the organization, we've
+                        got you covered.
+                    </p>
+                </div>
+                <div class="table-responsive d-none d-lg-block">
+                    <div class="content">
+                        <div class="price-head">
+                            <div class="price-headTitle">
+                                <img src="./assets/img/icons/price_s5.png" alt="">
+                            </div>
+                            <div class="price-headItem">
+                                <h6>HeenaGPT</h6>
+                                <h2 class="yearly_price color-blue5">$3499 <span>- One time </span></h2>
+                            </div>
+                            <div class="price-headItem bg-gray5">
+                                <h6>HeenaRAG</h6>
+                                <h2 class="yearly_price color-blue5">$4299 </h2>
+                                <!-- <div class="label">
+                                    best choice
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="price-body">
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    AI Capabilities
+                                </div>
+                                <div class="price-item">
+                                    State-of-the-art
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    State-of-the-art
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Lead Capture and Verification
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Custom Query Handling
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Effortless Meeting Scheduling
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Comprehensive Business Information
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Immersive Product Showcase
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    <em class="highlight">Feedback and Ratings</em>
+
+                                </div>
+                                <div class="price-item">
+
+                                    <i class="bi bi-check2 highlight"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2 highlight"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Ticket Generation
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    ChatGPT Integration
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    <em class="highlight"> Custom FAQ Limit</em>
+
+                                </div>
+                                <div class="price-item">
+                                    <em class="highlight"> 15</em>
+
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <em class="highlight"> No Limit</em>
+
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Robust Analytics
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Client-Friendly Dashboard
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Data Forwarding Customization
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Training Data Management
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Rich Media Responses
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Add/Edit/Delete Intents or Responses
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Done-For-You Development
+                                    <div class="pop-info">
+                                        <i class="fas fa-info-circle bttn-info"></i>
+                                        <div class="hidden_content">
+                                            <div class="title">Done-For-You Development</div>
+                                            <small class="small color-777 lh-5">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptatum,
+                                                eos ad quia sint recusandae.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Integration with Existing Software, ERP, CRM via APIs
+                                    <div class="pop-info">
+                                        <i class="fas fa-info-circle bttn-info"></i>
+                                        <div class="hidden_content">
+                                            <div class="title">Integration with Existing Software, ERP, CRM via APIs
+                                            </div>
+                                            <small class="small color-777 lh-5">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptatum,
+                                                eos ad quia sint recusandae.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    Possible
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    Possible
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Customization Flexibility
+                                    <div class="pop-info">
+                                        <i class="fas fa-info-circle bttn-info"></i>
+                                        <div class="hidden_content">
+                                            <div class="title">Customization Flexibility</div>
+                                            <small class="small color-777 lh-5">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptatum,
+                                                eos ad quia sint recusandae.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    High
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    High
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Document-Based Automatic Answers
+                                    <div class="pop-info">
+                                        <i class="fas fa-info-circle bttn-info"></i>
+                                        <div class="hidden_content">
+                                            <div class="title">Document-Based Automatic Answers</div>
+                                            <small class="small color-777 lh-5">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptatum,
+                                                eos ad quia sint recusandae.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Automated Intelligence
+                                    <div class="pop-info">
+                                        <i class="fas fa-info-circle bttn-info"></i>
+                                        <div class="hidden_content">
+                                            <div class="title">Automated Intelligence</div>
+                                            <small class="small color-777 lh-5">
+                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. In voluptatum,
+                                                eos ad quia sint recusandae.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="price-item">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    <i class="bi bi-check2"></i>
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Client Control Over Responses
+                                </div>
+                                <div class="price-item">
+                                    High
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    Limited
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Human-Like Natural Responses
+
+                                </div>
+                                <div class="price-item">
+                                    Limited
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    High
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Simplified Client Experience
+
+                                </div>
+                                <div class="price-item">
+                                    Limited
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    High
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Supported Languages
+                                </div>
+                                <div class="price-item">
+                                    All Major Languages
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    All Major Languages
+                                </div>
+                            </div>
+                            <div class="price-bodyItems">
+                                <div class="price-bodyTitle">
+                                    Recurring Costs (Monthly/Annual)
+                                </div>
+                                <div class="price-item">
+                                    $90/$900
+                                </div>
+                                <div class="price-item bg-gray5">
+                                    $100/$1000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-foot">
+                            <div class="price-footTitle">
+                            </div>
+                            <div class="price-footItem">
+                                <a href="#" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold">
+                                    <span> Get Started Now </span>
+                                </a>
+                            </div>
+                            <div class="price-footItem bg-gray5">
+                                <a href="#" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold">
+                                    <span> Get Started Now </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mob-table d-block d-lg-none mt-5">
+                    <div class="mob-table-title">
+                        <div class="row gx-0">
+                            <div class="col-4">
+                                <div class="title-item">
+                                    <h6> Features </h6>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="title-item">
+                                    <h6> HeenaGPT </h6>
+                                    <p> $3499 – One time </p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="title-item">
+                                    <h6> HeenaRAG </h6>
+                                    <p> $4299 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mob-table-body">
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> AI Capabilities </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        State-of-the-art
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        State-of-the-art
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Lead Capture and Verification </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Custom Query Handling </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Effortless Meeting Scheduling </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Comprehensive Business Information </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Immersive Product Showcase</h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Ticket Generation </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> ChatGPT Integration </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Robust Analytics </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Client-Friendly Dashboard</h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Data Forwarding Customization</h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Training Data Management </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Rich Media Responses </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Add/Edit/Delete Intents or Responses </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Done-For-You Development </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Integration with Existing Software, ERP, CRM via APIs </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        Possible
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        Possible
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Customization Flexibility </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        High
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        High
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Document-Based Automatic Answers </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Automated Intelligence </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-x"></i>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Client Control Over Responses </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        High
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        Limited
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Human-Like Natural Responses </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        Limited
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        High
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Simplified Client Experience </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        Limited
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        High
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Supported Languages </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        All Major Languages
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        All Major Languages
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row gx-0">
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        <h5> Recurring Costs (Monthly/Annual) </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        $90/$900
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="price-item">
+                                        $100/$1000
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mob-table-foot">
+                        <div class="row gx-0">
+                            <div class="col-4">
+                                <div class="title-item">
+                                    <h6> Pricing </h6>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="title-item">
+                                    <a href="#" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold">
+                                        <span> Get Started Now </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="title-item">
+                                    <a href="#" class="btn rounded-pill blue5-3Dbutn hover-blue2 sm-butn fw-bold">
+                                        <span> Get Started Now </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== end pricing ====== -->
+        <!--=====start-upcoming-Features=====-->
+        <section id="features">
+            <div class="container">
+                <div class="section-head text-center style-5">
+                    <h2> Upcoming <span> Features </span> </h2>
+                </div>
+                <!-- <div class="section-header text-center">
+                    <h2 class="section-title wow fadeInDown">Upcoming Features</h2>
+                    <div class="shape wow fadeInDown"></div>
+                </div> -->
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        <div class="content-left">
+                            <div class="box-item animated wow fadeInLeft">
+                                <span class="icon">
+                                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                                </span>
+                                <div class="text">
+                                    <h4>Payment within Chatbot</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+                            <div class="box-item animated wow fadeInLeft" data-wow-delay="0.6s">
+                                <span class="icon">
+                                    <i class="fas fa-tablet-alt"></i>
+                                </span>
+                                <div class="text">
+                                    <h4>Surveys and Polls</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        <div class="show-box animated wow fadeInUp">
+                            <img src="https://i.ibb.co/KjkFh55/phone-img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                        <div class="content-right">
+                            <div class="box-item animated wow fadeInRight">
+                                <span class="icon">
+                                    <i class="fas fa-pen-nib"></i>
+                                </span>
+                                <div class="text">
+                                    <h4>Human Handover</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                </div>
+                            </div>
+                            <div class="box-item animated wow fadeInLeft" data-wow-delay="0.9s">
+                                <span class="icon">
+                                    <i class="fa fa-microphone" aria-hidden="true"></i>
+                                </span>
+                                <div class="text">
+                                    <h4>Voice Capabilities</h4>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====end-upcoming-Features=====-->
+        <!--=====start-brands=====-->
+        <section id="brands" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="wrap">
+                        <div class="section-head text-center style-5 mb-60">
+                            <h2> Work With <span> Exceptional Brands </span> </h2>
+                        </div>
+                        <!-- <div class="section-head text-center style-4 ">
+
+                            <h2 class="mb-60">Work With <span> Exceptional Brands </span> </h2>
+                        </div> -->
+
+                        <ul class="clients">
+                            <li><a href=""><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg"
+                                        class="logogrid__img" alt="Spotify"></a></li>
+                            <li><a href=""><img src="https://webslides.tv/static/images/logos/google.svg"
+                                        alt="Google"></a></li>
+                            <li><a href=""><img src="https://webslides.tv/static/images/logos/airbnb.svg"
+                                        alt="Airbnb"></a></li>
+                            <li><a href=""><img src="https://webslides.tv/static/images/logos/apple.svg"
+                                        alt="Apple"></a></li>
+                            <li><a href=""><img src="https://webslides.tv/static/images/logos/microsoft.svg"
+                                        alt="Microsoft"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--=====end-brands=====-->
+        <!-- ====== start faq ====== -->
+        <section class="faq section-padding style-4 pt-50">
+            <div class="container">
+                <div class="content-holder mb-60">
+                    <div class="section-head text-center style-4 ">
+                        <small class="title_small">Frequently Asked Question</small>
+                    </div>
+                    <div class="section-head text-center style-5">
+                        <h2 class="style-5"> Need A <span> Support? </span> </h2>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <div class="faq style-3 style-4">
+                        <div class="accordion" id="accordionSt4">
+                            <div class="row gx-5">
+                                <div class="col-lg-6">
+                                    <div class="accordion-item border-bottom rounded-0">
+                                        <h2 class="accordion-header" id="heading11">
+                                            <button class="accordion-button collapsed rounded-0 py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse11"
+                                                aria-expanded="true" aria-controls="collapse11">
+                                                How can chatbots benefit my small business?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse11" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading11" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Our AI Chatbots can answer your customer's queries, qualify-record and
+                                                forward lead details, schedule appointments, forward custom queries and
+                                                allow your users to provide feedback or generate tickets. Bots serve
+                                                your users 24x7, reply instantly, can engage multiple users
+                                                simultaneously and record all chat sessions along with extensive
+                                                analytics
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-bottom rounded-0">
+                                        <h2 class="accordion-header" id="heading12">
+                                            <button class="accordion-button py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse12"
+                                                aria-expanded="false" aria-controls="collapse12">
+                                                What industries can benefit from this chatbot solution?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse12" class="accordion-collapse collapse show rounded-0"
+                                            aria-labelledby="heading12" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Chatbots are industry agnostic, that is, they can be useful for any
+                                                industry, department or function that receives multiple routine and
+                                                monotonous queries. They automate workflows that do not require human
+                                                judgement. They can also apply business logic to process requests or
+                                                record-update or provide data
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-bottom rounded-0">
+                                        <h2 class="accordion-header" id="heading13">
+                                            <button class="accordion-button collapsed py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse13"
+                                                aria-expanded="false" aria-controls="collapse13">
+                                                What features does the chatbot offer?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse13" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading13" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Our AI Chatbots provide features such as: Lead Generation and
+                                                Qualification, Scheduling Meetings, Custom Query Handling, Answering
+                                                General FAQs, Recording Feedback and Ratings, Opening Tickets as well as
+                                                providing Business Information along with powerful Dashboard for
+                                                customization and Extensive Analytics
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 rounded-0">
+                                        <h2 class="accordion-header" id="heading4">
+                                            <button class="accordion-button collapsed rounded-0 py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse4"
+                                                aria-expanded="true" aria-controls="collapse4">
+                                                What sets your chatbot solution apart from others in the market?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse4" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading4" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Our Smart Proprietary AI - Heena, is capable of processing improper
+                                                grammar and misspelt words to understand user's query to provide the
+                                                answer they are looking for. It can be trained on Custom Training
+                                                (HeenaGPT) or be attached to a Database (HeenRAG) to find requested
+                                                data, which is then returned to user in a personalised human-like
+                                                response. Our Bot also boasts of unique collection of features (eg:
+                                                Product Display, Rich Text and Media, Lead Capture & Verification, Real
+                                                Time Notifications, Extensive Analytics and much more) that are not
+                                                available at one place under any vendor. Lastly, we provide a
+                                                Done-For-You Service, so you don't have to hire someone to develop the
+                                                Bot
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="accordion-item border-bottom rounded-0">
+                                        <h2 class="accordion-header" id="heading5">
+                                            <button class="accordion-button collapsed rounded-0 py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse5"
+                                                aria-expanded="true" aria-controls="collapse5">
+                                                Who pays for the OpenAI APIs?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse5" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading5" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Since we do not have a limit to usage of our bots, expense on OpenAI's
+                                                APIs are borne by you
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-bottom rounded-0">
+                                        <h2 class="accordion-header" id="heading6">
+                                            <button class="accordion-button collapsed py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse6"
+                                                aria-expanded="false" aria-controls="collapse6">
+                                                What is RAG?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse6" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading6" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Retrieval-Augmented Generation (RAG) is an AI Technology combining
+                                                information retrieval with language generation, enhancing the accuracy
+                                                and relevance of text generation through retrieved knowledge. It is the
+                                                most advanced technology for commercial chatbots as of today.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-bottom rounded-0">
+                                        <h2 class="accordion-header" id="heading7">
+                                            <button class="accordion-button collapsed py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse7"
+                                                aria-expanded="false" aria-controls="collapse7">
+                                                Can I integrate the chatbot with other applications?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse7" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading7" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Yes, Our AI Chatbots can be integrated with any service, CRM, ERP or
+                                                Third Party Applications using APIs
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-bottom rounded-0">
+                                        <h2 class="accordion-header" id="heading8">
+                                            <button class="accordion-button collapsed rounded-0 py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse8"
+                                                aria-expanded="true" aria-controls="collapse8">
+                                                What kind of analytics and reports does the dashboard provide?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse8" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading8" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                Some of the Analytics we provide: Total number of messages in a session,
+                                                average confidence of a chat session, geolocation of users, average time
+                                                to respond, most asked question, confidence of each question answered,
+                                                chat histories, peak hours, questions not getting answered correctly and
+                                                much more
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item border-0 rounded-0">
+                                        <h2 class="accordion-header" id="heading9">
+                                            <button class="accordion-button collapsed rounded-0 py-4" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse9"
+                                                aria-expanded="true" aria-controls="collapse9">
+                                                Is there a trial available to understand its functionality?
+                                            </button>
+                                        </h2>
+                                        <div id="collapse9" class="accordion-collapse collapse rounded-0"
+                                            aria-labelledby="heading9" data-bs-parent="#accordionSt4">
+                                            <div class="accordion-body">
+                                                No, we provide custom development as per your business requirements.
+                                                Hence, there is no trial. However, we do provide a dummy chatbot for you
+                                                to play around and understand capabilities
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== end faq ====== -->
+        <!--====Start-Manage-Business===-->
+        <section id="manage-business" class="section-padding">
+            <div class="container get-qoute-banner">
+                <div class="row align-items-center">
+                    <div class="section-head text-center style-4 mb-80">
+                        <h2>
+                            Everything You Need To <span> Manage Business </span>
+                        </h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <div class="btns mt-3 btn-container">
+                                <button type="button" class="btn-model1 btn" data-bs-toggle="modal"
+                                    data-bs-target="#booknowmodal">
+                                    <small> Book Now <i class="fas fa-long-arrow-alt-right"></i> </small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 d-none d-lg-block mb-80">
+                        <div class="container-inner">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="btns mt-3 btn-container">
+                            <button type="button" class="btn-model1 btn" data-bs-toggle="modal"
+                                data-bs-target="#booknowmodal">
+                                <small> I have More Questions<i class="ml-custom fas fa-long-arrow-alt-right"></i>
+                                </small>
+                            </button>
+                        </div>
+
+                        <!-- <div class="btns text-lg-end">
+            <button type="button"
+                class="btn-model1 btn btn-icon-circle rounded-pill bg-blue7 fw-bold text-white align-items-center"
+                data-bs-toggle="modal" data-bs-target="#askmoremodal">
+                <small> I have More Questions <i class="fas fa-long-arrow-alt-right"></i> </small>
+            </button>
+        </div> -->
+                    </div>
+                    <div class="section-head text-center style-4 mb-80">
+                        <h2>
+                            Special Bonus for first 10 Businesses - <span> Users Your First Month is Free! </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====end-Manage-Business===-->
+        <!--====start Chat Widget====-->
+
+        <section id="social-media" class="section-padding">
+            <div class="container">
+                <ul class="social-color">
+                    <li><a href="#" class="social-button-vk"><i class="fab fa-vk"></i></a></li>
+                    <li><a href="https://www.facebook.com/intent/facebook" class="social-button-f">
+                            <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="social-button-telegram"><i class="fab fa-telegram-plane"></i></a></li>
+                    <li><a href="https://twitter.com/intent/tweet?" class="social-button-x">
+                            <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.youtube.com/intent/youtube" class="social-button-xc">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.twitch.tv/intent" class="social-button-twitch">
+
+                            <i class="fa fa-twitch" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/intent/instagram" class="social-button-instagram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+        </section>
+        <!--====End Chat Widget====-->
+        <div class="chatblock container">
+            <div id="modal1" class="modal">
+                <canvas id="modal-chart"></canvas>
+            </div>
+            <div class="widget">
+                <div class="chat_header">
+                    <!-- <div style="display: flex; flex-direction: row; justify-content: center;align-items: center;"> -->
+                    <span class="chat_header_title"
+                        style="display: flex;justify-content: center;flex-direction: row;align-items: center;">
+                        <img src="./assets/img/bot.png" height="20px" width="20px" alt="">&nbsp;&nbsp;HeenaGPT
+                    </span>
+                    <span class="dropdown-trigger" href="#" data-target="dropdown1">
+                        <i class="material-icons"> more_vert </i>
+                    </span>
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="javascript:void(0)" id="clear">Clear</a></li>
+                        <li><a href="javascript:void(0)" id="close">Close</a></li>
+                    </ul>
+                </div>
+                <iframe class="chatframe" id="chatframe" src="{% url 'chatfull"></iframe>
+                </div>
+                <div class="profile_div" id="profile_div">
+                    <img class="imgProfile" src="./assets/img/chat.png" alt=""/>
+                </div>
+            </div>
+
+        </main>
+        <!--End-Contents-->
+
+        <!-- ====== request ====== -->
+
+
+
+        <script src="./assets/js/lib/jquery-3.0.0.min.js"></script>
+        <script src="https://pbutcher.uk/flipdown/js/flipdown/flipdown.js"></script>
+        <script src="./assets/js/lib/jquery-migrate-3.0.0.min.js"></script>
+        <script src="./assets/js/lib/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/lib/wow.min.js"></script>
+        <script src="./assets/js/lib/jquery.fancybox.js"></script>
+        <script src="./assets/js/lib/lity.js"></script>
+        <script src="./assets/js/lib/swiper.min.js"></script>
+        <script src="./assets/js/lib/jquery.waypoints.min.js"></script>
+        <script src="./assets/js/lib/jquery.counterup.js"></script>
+        <!--  <script src="assets/js/lib/pace.js"></script> -->
+        <script src="./assets/js/lib/scrollIt.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/lib/uuid.min.js"></script>
+        <script type="text/javascript" src="./assets/js/lib/showdown.min.js"></script>
+        <script type="text/javascript" src="./assets/js/float.js"></script>
+   <!-- <script>
+    $(document).ready(function ()
+         $('.btn-model1').on('click', function ()
+              $('#booknowmodal').modal('show')
+         )}
+  </script> -->
+  <script>
+ document.addEventListener('DOMContentLoaded', () => {
+let timer_ = 1705276799;
+let flipdown = new FlipDown(timer_).start().ifEnded(()=>{
+    document.querySelector('.flipdown').innerHTML = `<h2>timer is ended</h2>`
+})
+
+ })
+  </script>
+    </body>

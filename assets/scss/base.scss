@@ -1,0 +1,495 @@
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) and (min-width: 0) {
+        @content;
+      } //600px
+    }
+    @if $breakpoint == smTab {
+      @media only screen and (max-width: 45.25em) and (min-width: 37.5em) {
+        @content;
+      } //900px
+    }
+    @if $breakpoint == tab {
+      @media only screen and (max-width: 56.25em) and (min-width: 45.25em) {
+        @content;
+      } //900px
+    }
+    @if $breakpoint == lgTab {
+      @media only screen and (max-width: 75em) and (min-width: 56.25em) {
+        @content;
+      } //1200px
+    }
+    @if $breakpoint == desktop {
+      @media only screen and (max-width: 90em) and (min-width: 75em) {
+        @content;
+      } //1200px
+    }
+    @if $breakpoint == bgDesktop {
+      @media only screen and (min-width: 112.5em) and (min-width: 90.1rem) {
+        @content;
+      } //1800
+    }
+  }
+  
+
+
+/* Chatbot Header */
+.chat-header{
+    height: 56px;
+    border-bottom: 1px solid #efefef;
+    padding:8px 16px;
+    margin-bottom: 12px;
+    // background-color: #060dcfc7;
+    // background-color: #fff;
+    background:linear-gradient(90deg, #060dcfcc, #060dcfd6, #060dcf9e);
+    box-shadow: 0 3px 5px -2px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include respond(phone){
+        display: none;
+    }
+
+    &__heading{
+        font-size: 20px;
+        color: #fff;
+        // color: #fff;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    &__actions{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:8px;
+        position: absolute;
+        right:12px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__action{
+        background-color: rgba(#fff,.4);
+        background-color: rgba(#111,.4);
+        border-radius: 24px;
+        padding:6px 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        gap:6px;
+        height: 32px;
+        width: 32px;
+        overflow: hidden;
+        position: relative;
+        transition: width .2s ease-in-out;
+        color: #fff;
+        &:hover{
+            width: 116px;
+            .chat-header__action-text{
+                display: block;
+                visibility: visible;
+                opacity: 1;
+                width: 72px;
+            }
+        }
+        &-text{
+            visibility: hidden;
+            opacity: 0;
+            display: none;
+            transition: width .1s ease-in-out;
+            overflow: hidden;
+            height: 16px;
+            width: 0;
+        }
+        .material-icons{
+            font-size: 16px;
+        }
+    }
+}
+
+
+// Product Card Design 
+.product-card{
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #f7f7f7;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    // box-shadow: 0 2px 3px rgba(0,0,0,0.12);
+    width: 200px;
+    min-width: 200px;
+    // padding: 8px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: center;
+    position: relative;
+    scroll-behavior: smooth;
+
+    &__image{
+        width: 100%;
+        height: 136px;
+        background: #e4eff9;
+        border-radius: 8px 8px 0px 0px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px 8px 0px 0px;
+        }
+    }
+
+    &__body{
+        padding: 6px 8px;
+        flex:1;
+    }
+
+    &__title{
+        font-size: 15px;
+        font-weight: 600;
+        color: #232323;
+        height: 24px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__price{
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        text-align: right;
+        position: absolute;
+        top: 128px;
+        right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-100%);
+        padding: 2px 6px;
+        border-radius: 6px;
+        background: rgb(6 13 207 / 50%);
+    }
+
+    &__desc{
+        font-size: 12px;
+        max-height: 36px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 2px;
+        border-top: 1px solid #efefef;
+    }
+
+    &__action{
+        // background: #36A9E1;
+        // padding: 4px 8px;
+        // border-radius: 20px;
+        // color: #fff;
+        flex:1;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        background: transparent;
+        color: #333;
+        padding: 6px 10px;
+        &:not(:last-child){
+            border-right: 1px solid #efefef;
+            // border-bottom: 1px solid #efefef;
+        }
+        &:hover{
+            color: #060dcf;
+            background-color: #f6f8fa;
+        }
+    }
+}
+
+//Cards Control
+.cards_control{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 32px;
+    height: 32px;
+    background-color: #efefef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 1px 0px 10px 1px rgba(2,2,2,.1);
+    &:hover{
+        background-color: #e1e1e1;
+    }
+    span{
+        font-size: 16px;
+    }
+    &-right{
+        // left: 350px;
+        right: -20px;
+    }
+    &-left{
+        left: 0px;
+    }
+}
+
+//Chats 
+.chat{
+    &-image{
+        padding: 8px;
+        background: rgba(#5ebae7,.24);
+        border-radius: 12px;
+        max-width: max-content;
+        img{
+            max-width: 100%;
+            max-height: 300px;
+            width: 400px;
+            height: auto;
+            -o-object-fit: cover;
+            object-fit: cover;
+            border-radius: 4px;
+
+            @include respond(phone){
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                max-height: 240px;
+            }
+        
+        }
+    }
+    &-document{
+        width: 100%;
+        max-width: 800px;
+        margin:12px 0;
+        height: 600px;
+        @include respond(phone){
+            height: 400px;
+        }
+    }
+    &-video{
+        max-width: 100%;
+        max-height: 300px;
+        width: 400px;
+        height: 250px;
+        margin: 6px 0;
+    }
+}
+table{
+    max-width: calc(100% - 80px);
+    margin:12px 0;
+    @include respond(phone){
+        max-width: 100%;
+    }
+}
+
+.dropdown{
+    position: relative;
+
+    &-show{
+        display: block;
+        top: 44px;
+        opacity: 1;
+
+        .dropdown-item{
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #383b3e;
+            @include respond(phone){
+                padding: 8px 12px;
+            }
+        }
+        @include respond(phone){
+            max-width: 100%;
+            // position: fixed;
+            // bottom: 0;
+            // left: 0;
+            // right: 0;
+            // top: unset;
+            // border-radius: 12px 12px 0 0;
+        }
+    }
+}
+
+.btn{
+    &-primary{
+        box-shadow: none;
+        background: #414fd8;
+        color: #fff;
+        border-radius: 5px;
+        margin: 4px 0;
+
+        &:hover{
+            background-color: rgba(#414fd8,.8);
+        }
+    }
+}
+.check{
+    span{
+        &::after{
+            border-radius: 3px;
+        }
+        
+    }
+    [type="checkbox"].filled-in:checked+span:not(.lever):after{
+        background-color: #414fd8;
+        border-color: #414fd8;
+    }
+}
+.radio-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:8px;
+
+    label{
+        span{
+            &::before{
+                padding:2px;
+            }
+            padding-left: 28px !important;
+        }
+        
+    }
+    [type="radio"]:checked+span:after, [type="radio"].with-gap:checked+span:after{
+        background-color: #414fd8;
+        border-color: #414fd8;
+    }
+}
+//Dropdown
+.dropdown-content{
+    border-radius: 8px;
+    height: unset !important;
+    li{
+        min-height: unset;
+        a{
+            font-size: 14px;
+            color: #333;
+            line-height: 18px;
+            padding: 10px 14px;
+        }
+
+        &:not(:last-child){
+            border-bottom: 1px solid #efefef;
+        }
+    }
+}
+
+
+//Responsive styling
+.chat-container{
+    @include respond(phone){
+        padding-bottom: 50px;
+    }
+}
+
+.message-text{
+    @include respond(phone){
+        padding: 8px 12px;
+        border-radius: 24px;
+        // padding: 12px 16px;
+    }
+}
+
+.user-message .message-text{
+    @include respond(phone){
+        max-width: calc(100% - 75px);
+    }
+}
+
+.bot-message{
+    @include respond(phone){
+        max-width: calc(100% - 32px);
+    }
+}
+
+.chatbox{
+    @include respond(phone){
+        max-height: 100%;
+        padding-bottom: 36px;
+    }
+}
+
+.input-section{
+    @include respond(phone){
+        width: calc(100% - 20px);
+        height: 44px;
+        bottom:8px;
+
+        #send-button{
+            width: 36px;
+            height: 36px;
+        }
+    }
+}
+
+
+.widget {
+    @include respond(phone){
+        width: 100vw;
+        max-width: 100%;
+        height: 100vh;
+        max-height: 100%;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 0px;
+        .chat_header{
+            border-radius: 0px;
+        }
+        .chatframe{
+            height: calc(100% - 60px);
+        }
+    }
+}
+
+
+.cards{
+    @include respond(phone){
+        max-width: 100%;
+
+        .cards_control-right{
+            left: unset;
+            right: 0px;
+        }
+        .cards_scroller{
+            // width: 100%;
+            width: calc(100% - 39px);
+        }
+    }
+}

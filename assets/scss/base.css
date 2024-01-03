@@ -1,0 +1,379 @@
+/* 0 - 600px: Phone 600 - 900px: Tablet portrait 900 - 1200px: Tablet landscape [1200 - 1800] is where our normal styles apply 1800px + : Big desktop $breakpoint arguement choices: - phone - tab-port - tab-land - big-desktop ORDER: Base + typography > general layout + grid > page layout > components 1em = 16px */
+/* Chatbot Header */
+ .chat-header {
+	 height: 56px;
+	 border-bottom: 1px solid #efefef;
+	 padding: 8px 16px;
+	 margin-bottom: 12px;
+	 background: linear-gradient(90deg, #060dcf cc, #060dcf d6, #060dcf 9e);
+	 box-shadow: 0 3px 5px -2px rgba(0, 0, 0, 0.2);
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 justify-content: center;
+	 position: relative;
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .chat-header {
+		 display: none;
+	}
+}
+ .chat-header__heading {
+	 font-size: 20px;
+	 color: #fff;
+	 font-weight: 600;
+	 line-height: 24px;
+}
+ .chat-header__actions {
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 gap: 8px;
+	 position: absolute;
+	 right: 12px;
+	 top: 50%;
+	 transform: translateY(-50%);
+}
+ .chat-header__action {
+	 background-color: rgba(255, 255, 255, .4);
+	 background-color: rgba(17, 17, 17, .4);
+	 border-radius: 24px;
+	 padding: 6px 8px;
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 justify-content: center;
+	 font-size: 13px;
+	 gap: 6px;
+	 height: 32px;
+	 width: 32px;
+	 overflow: hidden;
+	 position: relative;
+	 transition: width 0.2s ease-in-out;
+	 color: #fff;
+}
+ .chat-header__action:hover {
+	 width: 116px;
+}
+ .chat-header__action:hover .chat-header__action-text {
+	 display: block;
+	 visibility: visible;
+	 opacity: 1;
+	 width: 72px;
+}
+ .chat-header__action-text {
+	 visibility: hidden;
+	 opacity: 0;
+	 display: none;
+	 transition: width 0.1s ease-in-out;
+	 overflow: hidden;
+	 height: 16px;
+	 width: 0;
+}
+ .chat-header__action .material-icons {
+	 font-size: 16px;
+}
+ .product-card {
+	 border-radius: 8px;
+	 background: #fff;
+	 border: 1px solid #f7f7f7;
+	 box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	 width: 200px;
+	 min-width: 200px;
+	 height: 240px;
+	 display: flex;
+	 flex-direction: column;
+	 scroll-snap-align: center;
+	 position: relative;
+	 scroll-behavior: smooth;
+}
+ .product-card__image {
+	 width: 100%;
+	 height: 136px;
+	 background: #e4eff9;
+	 border-radius: 8px 8px 0px 0px;
+}
+ .product-card__image img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+	 border-radius: 8px 8px 0px 0px;
+}
+ .product-card__body {
+	 padding: 6px 8px;
+	 flex: 1;
+}
+ .product-card__title {
+	 font-size: 15px;
+	 font-weight: 600;
+	 color: #232323;
+	 height: 24px;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+	 white-space: nowrap;
+}
+ .product-card__price {
+	 font-size: 14px;
+	 font-weight: 600;
+	 color: #fff;
+	 text-align: right;
+	 position: absolute;
+	 top: 128px;
+	 right: 8px;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 transform: translateY(-100%);
+	 padding: 2px 6px;
+	 border-radius: 6px;
+	 background: #000;
+}
+ .product-card__desc {
+	 font-size: 12px;
+	 max-height: 36px;
+	 display: -webkit-box;
+	 -webkit-line-clamp: 2;
+	 -webkit-box-orient: vertical;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+}
+ .product-card__footer {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: flex-end;
+	 margin-top: 2px;
+	 border-top: 1px solid #efefef;
+}
+ .product-card__action {
+	 flex: 1;
+	 font-size: 12px;
+	 font-weight: 600;
+	 cursor: pointer;
+	 text-align: center;
+	 background: transparent;
+	 color: #333;
+	 padding: 6px 10px;
+}
+ .product-card__action:not(:last-child) {
+	 border-right: 1px solid #efefef;
+}
+ .product-card__action:hover {
+	 color: #060dcf;
+	 background-color: #f6f8fa;
+}
+ .cards_control {
+	 position: absolute;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 width: 32px;
+	 height: 32px;
+	 background-color: #efefef;
+	 border-radius: 50%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 cursor: pointer;
+	 box-shadow: 1px 0px 10px 1px rgba(2, 2, 2, .1);
+}
+ .cards_control:hover {
+	 background-color: #e1e1e1;
+}
+ .cards_control span {
+	 font-size: 16px;
+}
+ .cards_control-right {
+	 right: -20px;
+}
+ .cards_control-left {
+	 left: 0px;
+}
+ .chat-image {
+	 padding: 8px;
+	 background: rgba(94, 186, 231, .24);
+	 border-radius: 12px;
+	 max-width: max-content;
+}
+ .chat-image img {
+	 max-width: 100%;
+	 max-height: 300px;
+	 width: 400px;
+	 height: auto;
+	 -o-object-fit: cover;
+	 object-fit: cover;
+	 border-radius: 4px;
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .chat-image img {
+		 width: 100%;
+		 max-width: 100%;
+		 height: auto;
+		 max-height: 240px;
+	}
+}
+ .chat-document {
+	 width: 100%;
+	 max-width: 800px;
+	 margin: 12px 0;
+	 height: 600px;
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .chat-document {
+		 height: 400px;
+	}
+}
+ .chat-video {
+	 max-width: 100%;
+	 max-height: 300px;
+	 width: 400px;
+	 height: 250px;
+	 margin: 6px 0;
+}
+ table {
+	 max-width: calc(100% - 80px);
+	 margin: 12px 0;
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 table {
+		 max-width: 100%;
+	}
+}
+ .dropdown {
+	 position: relative;
+}
+ .dropdown-show {
+	 display: block;
+	 top: 44px;
+	 opacity: 1;
+}
+ .dropdown-show .dropdown-item {
+	 padding: 6px 12px;
+	 font-size: 14px;
+	 font-weight: 400;
+	 color: #383b3e;
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .dropdown-show .dropdown-item {
+		 padding: 8px 12px;
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .dropdown-show {
+		 max-width: 100%;
+	}
+}
+ .btn-primary {
+	 box-shadow: none;
+	 background: #414fd8;
+	 color: #fff;
+	 border-radius: 5px;
+	 margin: 4px 0;
+}
+ .btn-primary:hover {
+	 background-color: rgba(65, 79, 216, .8);
+}
+ .check span::after {
+	 border-radius: 3px;
+}
+ .check [type="checkbox"].filled-in:checked + span:not(.lever):after {
+	 background-color: #414fd8;
+	 border-color: #414fd8;
+}
+ .radio-group {
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+	 gap: 8px;
+}
+ .radio-group label span {
+	 padding-left: 28px !important;
+}
+ .radio-group label span::before {
+	 padding: 2px;
+}
+ .radio-group [type="radio"]:checked + span:after, .radio-group [type="radio"].with-gap:checked + span:after {
+	 background-color: #414fd8;
+	 border-color: #414fd8;
+}
+ .dropdown-content {
+	 border-radius: 8px;
+	 height: unset !important;
+}
+ .dropdown-content li {
+	 min-height: unset;
+}
+ .dropdown-content li a {
+	 font-size: 14px;
+	 color: #333;
+	 line-height: 18px;
+	 padding: 10px 14px;
+}
+ .dropdown-content li:not(:last-child) {
+	 border-bottom: 1px solid #efefef;
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .chat-container {
+		 padding-bottom: 50px;
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .message-text {
+		 padding: 8px 12px;
+		 border-radius: 24px;
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .user-message .message-text {
+		 max-width: calc(100% - 75px);
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .bot-message {
+		 max-width: calc(100% - 32px);
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .chatbox {
+		 max-height: 100%;
+		 padding-bottom: 36px;
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .input-section {
+		 width: calc(100% - 20px);
+		 height: 44px;
+		 bottom: 8px;
+	}
+	 .input-section #send-button {
+		 width: 36px;
+		 height: 36px;
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .widget {
+		 width: 100vw;
+		 max-width: 100%;
+		 height: 100vh;
+		 max-height: 100%;
+		 right: 0px;
+		 bottom: 0px;
+		 border-radius: 0px;
+	}
+	 .widget .chat_header {
+		 border-radius: 0px;
+	}
+	 .widget .chatframe {
+		 height: calc(100% - 60px);
+	}
+}
+ @media only screen and (max-width: 37.5em) and (min-width: 0) {
+	 .cards {
+		 max-width: 100%;
+	}
+	 .cards .cards_control-right {
+		 left: unset;
+		 right: 0px;
+	}
+	 .cards .cards_scroller {
+		 width: calc(100% - 39px);
+	}
+}
