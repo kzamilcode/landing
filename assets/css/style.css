@@ -5817,11 +5817,11 @@ header.style-15 .countdown-content .logos img {
 }
 /******/
 
-.panel-wrapper {
+.services .panel-wrapper {
   position: relative;
 }
 
-.panel-btn {
+.services .panel-btn {
   color: #fff;
   border-radius: 1.5em;
   left: 40%;
@@ -5836,8 +5836,8 @@ header.style-15 .countdown-content .logos img {
     #0c3df4
   );
 }
-.show,
-.hide {
+.services .show,
+.services .hide {
   position: absolute;
   bottom: -60px;
   z-index: 100;
@@ -5845,27 +5845,27 @@ header.style-15 .countdown-content .logos img {
   font-size: 15px;
 }
 
-.hide {
+.services .hide {
   display: none;
 }
 
-.show:target {
+.services .show:target {
   display: none;
 }
 
-.show:target ~ .hide {
+.services .show:target ~ .hide {
   display: block;
 }
 
-.show:target ~ .panel {
+.services .show:target ~ .panel {
   max-height: 2000px;
 }
 
-.show:target ~ .fade {
+.services .show:target ~ .fade {
   margin-top: 0;
 }
 
-.panel {
+.services .panel {
   position: relative;
   max-height: 310px;
   overflow: hidden;
