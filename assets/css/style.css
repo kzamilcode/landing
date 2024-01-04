@@ -18528,6 +18528,22 @@ footer.style-15 .foot p {
   width: 100%;
 }
 /**brands**/
+.client__box a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.client__box:hover a {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+.client__box:hover a:not(:hover) {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+.client__box a:hover {
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+}
 .client .swiper-container {
   padding: 40px 50px;
 }
@@ -18535,7 +18551,18 @@ footer.style-15 .foot p {
   display: block;
   margin: 0 auto;
 }
+.client__box img {
+  -webkit-filter: grayscale(100%) brightness(10%) contrast(10%);
+  filter: grayscale(100%) brightness(10%) contrast(10%);
+}
 
+.client__box img:hover {
+  background: none;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 @media only screen and (max-width: 767px) {
   .client .swiper-container {
     padding: 0 0 40px;
