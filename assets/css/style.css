@@ -18528,65 +18528,28 @@ footer.style-15 .foot p {
   width: 100%;
 }
 /**brands**/
-.wrap {
-  position: relative;
-  width: 100%;
+.client .swiper-container {
+  padding: 40px 50px;
+}
+.client__box img {
+  display: block;
+  margin: 0 auto;
 }
 
-.clients {
-  align-items: center;
-  -webkit-box-align: center;
-  display: grid;
-  gap: 4.8rem 4.8rem;
-  grid-template-columns: auto auto;
-  justify-items: center;
-}
-
-.clients li {
-  list-style: none;
-  margin: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.clients img {
-  height: 3.2rem;
-}
-.clients:hover li {
-  filter: blur(0px);
-  -webkit-filter: blur(0px);
-}
-.clients:hover li:not(:hover) {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-}
-.clients li:hover {
-  -webkit-transform: translateY(-0.3rem);
-  transform: translateY(-0.3rem);
-}
-
-@media (min-width: 1024px) {
-  .clients {
-    grid-template-columns: auto auto auto auto auto;
+@media only screen and (max-width: 767px) {
+  .client .swiper-container {
+    padding: 0 0 40px;
   }
-
-  .clients img {
-    height: 4rem;
+  .client__box {
+    padding: 0;
+    text-align: center;
+  }
+  .client .swiper-button-prev,
+  .client .swiper-button-next {
+    display: none;
   }
 }
 
-/* --- Images (gray logo) --- */
-.clients img {
-  -webkit-filter: grayscale(100%) brightness(10%) contrast(10%);
-  filter: grayscale(100%) brightness(10%) contrast(10%);
-}
-
-.clients img:hover {
-  background: none;
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
 /***/
 .butn.btn-icon-circle,
 .btn.btn-icon-circle {

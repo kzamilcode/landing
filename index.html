@@ -587,13 +587,11 @@
                     </div><!-- end panel -->
                     <!-- <div class="fade"></div> -->
                 </div>
-
             </div>
             <img src="./assets/img/services/ser_shap_l.png" alt="" class="ser_shap_l">
             <img src="./assets/img/services/ser_shap_r.png" alt="" class="ser_shap_r">
         </section>
         <!-- ====== end services ====== -->
-
 
         <!-- ====== start choose-us====== -->
         <section class="choose-us section-padding pt-5 pb-5 bg-gray style-1">
@@ -1847,35 +1845,79 @@
         </section>
         <!--=====end-upcoming-Features=====-->
         <!--=====start-brands=====-->
-        <section id="brands" class="section-padding pt-3">
+        <section id="brands" class="client pt-5 pb-5">
             <div class="container">
-                <div class="row">
-                    <div class="wrap">
-                        <div class="section-head text-center style-5 mb-60">
-                            <h2> Work With <span> Exceptional Brands </span> </h2>
+                <div class="section-head text-center style-5 mb-60">
+                    <h2> Work With <span> Exceptional Brands </span> </h2>
+                </div>
+                <div class="swiper-container">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg"
+                                        class="logogrid__img" alt="Spotify"></a>
+                            </div>
                         </div>
-                        <!-- <div class="section-head text-center style-4 ">
-
-                            <h2 class="mb-60">Work With <span> Exceptional Brands </span> </h2>
-                        </div> -->
-
-                        <ul class="clients">
-                            <li><a href=""><img
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href=""><img src="https://webslides.tv/static/images/logos/google.svg" alt="Google">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href=""><img src="https://webslides.tv/static/images/logos/airbnb.svg"
+                                        alt="Airbnb"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href=""><img
                                         src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg"
-                                        class="logogrid__img" alt="Spotify"></a></li>
-                            <li><a href=""><img src="https://webslides.tv/static/images/logos/google.svg"
-                                        alt="Google"></a></li>
-                            <li><a href=""><img src="https://webslides.tv/static/images/logos/airbnb.svg"
-                                        alt="Airbnb"></a></li>
-                            <li><a href=""><img src="https://webslides.tv/static/images/logos/apple.svg"
-                                        alt="Apple"></a></li>
-                            <li><a href=""><img src="https://webslides.tv/static/images/logos/microsoft.svg"
-                                        alt="Microsoft"></a></li>
-                        </ul>
+                                        class="logogrid__img" alt="Spotify"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href=""><img src="https://webslides.tv/static/images/logos/microsoft.svg"
+                                        alt="Microsoft"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href="">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg"
+                                        class="logogrid__img" alt="Spotify"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href=""><img src="https://webslides.tv/static/images/logos/google.svg" alt="Google">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="client__box">
+                                <a href=""><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg"
+                                        class="logogrid__img" alt="Spotify"></a>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+
                 </div>
             </div>
         </section>
+
         <!--=====end-brands=====-->
         <!-- ====== start faq ====== -->
         <section class="faq section-padding style-4 pt-30">
@@ -2175,8 +2217,6 @@
         <!--End-Contents-->
 
         <!-- ====== request ====== -->
-
-
         <script src="./assets/js/lib/jquery-3.0.0.min.js"></script>
         <script src="./assets/js/components/jquery.flipDown.js"></script>
         <script src="./assets/js/lib/jquery-migrate-3.0.0.min.js"></script>
@@ -2200,6 +2240,44 @@ let flipdown = new FlipDown(timer_).start().ifEnded(()=>{
     document.querySelector('.flipdown').innerHTML = `<h2>timer is ended</h2>`
 })
 
- })
+ });
+ var mySwiper = new Swiper('.client .swiper-container', {
+  loop: false,
+  speed: 1000,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    414: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+    991: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+  }
+})
   </script>
     </body>
