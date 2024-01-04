@@ -5678,8 +5678,7 @@ header.style-15 .countdown-content .logos img {
 /* --------------- services styles --------------- */
 
 .services {
-  background-color: #f4d03f;
-  background-image: linear-gradient(132deg, #f4d03f 0%, #16a085 100%);
+  background: #dedbeb;
 }
 .services .content {
   margin-inline: auto;
@@ -5725,13 +5724,10 @@ header.style-15 .countdown-content .logos img {
 .service-box .icon {
   border-radius: var(--borderR) 0 0 0;
   position: relative;
-}
-.service-box .icon img {
-  width: 40px;
-  object-fit: contain;
-  margin: 0 auto;
   padding-top: 15px;
+  font-size: 1rem;
 }
+
 .service-box .title {
   grid-area: title;
   font-size: 1rem;
@@ -5819,7 +5815,74 @@ header.style-15 .countdown-content .logos img {
   right: 0;
   top: 25%;
 }
+/******/
 
+.panel-wrapper {
+  position: relative;
+}
+
+.panel-btn {
+  color: #fff;
+  border-radius: 1.5em;
+  left: 40%;
+  padding: 1em;
+  text-decoration: none;
+  width: 20%;
+  background: linear-gradient(
+    to right,
+    #0c3df4 10%,
+    #02b5ff 45%,
+    #02b5ff,
+    #0c3df4
+  );
+}
+.show,
+.hide {
+  position: absolute;
+  bottom: -60px;
+  z-index: 100;
+  text-align: center;
+  font-size: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.show:target {
+  display: none;
+}
+
+.show:target ~ .hide {
+  display: block;
+}
+
+.show:target ~ .panel {
+  max-height: 2000px;
+}
+
+.show:target ~ .fade {
+  margin-top: 0;
+}
+
+.panel {
+  position: relative;
+  max-height: 310px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+/* .fade {
+  background: linear-gradient(
+    to bottom,
+    rgba(100, 100, 100, 0) 0%,
+    #646464 75%
+  );
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
+} */
+/******/
 /* ===============================================================
 			[ * choose-us Section ]
 ================================================================*/
