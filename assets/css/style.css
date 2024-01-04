@@ -5864,7 +5864,6 @@ header.style-15 .countdown-content .logos img {
 .services .show:target ~ .fade {
   margin-top: 0;
 }
-
 .services .panel {
   position: relative;
   max-height: 310px;
